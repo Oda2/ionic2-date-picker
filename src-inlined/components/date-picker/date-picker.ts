@@ -42,8 +42,8 @@ import { DatePickerProvider } from '../../providers/date-picker/date-picker';
           </div>
         </div>
         <div class="layout-row action-container">
-          <button class="cancel-button button button-md button-clear button-clear-md" clear (click)="cancel()">Cancel</button>
-          <button clear class="ok-button button button-md button-clear button-clear-md" (click)="confirmDateSelection()">OK</button>
+          <button class="cancel-button button button-md button-clear button-clear-md" clear (click)="cancel()">{{ cancelText() }}</button>
+          <button clear class="ok-button button button-md button-clear button-clear-md" (click)="confirmDateSelection()">{{ okText() }}</button>
         </div>
 
 
@@ -106,6 +106,14 @@ export class DatePicker implements OnDestroy {
 
   public confirmDateSelection() {
     this.datePickerProvider.onDismiss.next(this.selectedDateItem.momentDate.toDate());
+  }
+
+  public okText() {
+    return this.datePickerOption.okText;
+  }
+
+  public cancelText() {
+    return this.datePickerOption.cancelText;
   }
 
   private renderCalender() {

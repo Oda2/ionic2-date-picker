@@ -64,6 +64,14 @@ export class DatePicker implements OnDestroy {
     this.datePickerProvider.onDismiss.next(this.selectedDateItem.momentDate.toDate());
   }
 
+  public okText() {
+    return this.datePickerOption.okText;
+  }
+
+  public cancelText() {
+    return this.datePickerOption.cancelText;
+  }
+
   private renderCalender() {
     this.daysOfMonth = this.generateDaysOfMonth(this.currentMoment.year(), this.currentMoment.month() + 1, this.currentMoment.date());
     this.daysGroupedByWeek = this.groupByWeek(this.daysOfMonth);
