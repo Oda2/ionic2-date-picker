@@ -32,8 +32,8 @@
       </div>
     </div>
     <div class="layout-row action-container">
-      <button class="cancel-button button button-md button-clear button-clear-md" clear (click)="cancel()">Cancel</button>
-      <button clear class="ok-button button button-md button-clear button-clear-md" (click)="confirmDateSelection()">OK</button>
+      <button class="cancel-button button button-md button-clear button-clear-md" clear (click)="cancel()">{{ datePickerOption.cancelText }}</button>
+      <button clear class="ok-button button button-md button-clear button-clear-md" (click)="confirmDateSelection()">{{ datePickerOption.okText }}</button>
     </div>
 
 

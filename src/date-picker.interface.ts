@@ -9,4 +9,6 @@ export class DateItem {
 export class DatePickerOption {
     minimumDate?: Date;
     maximumDate? : Date;
+    okText? : string = "OK";
+    cancelText? : string = "Cancel";
 }
